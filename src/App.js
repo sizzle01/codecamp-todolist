@@ -1,31 +1,19 @@
 import React from "react";
+import TodoItem from "./Todoitem";
+import style from './style.css'
+import todoData from "./todoData";
 
 
 function App() {
+ const todoItem = todoData.map(item => <TodoItem key={item.id} item={item}/>)
+
   return (
-    <div className= "items">
+   <div className= "to-list">
+{todoItem}
 
-      <input type="checkbox" id="todobox1" name="" value=""/>
-  <label htmlFor="todobox1">I'm going to do the dishes</label> <br/>
-
-  <input type="checkbox" id="todobox1" name="" value=""/>
-  <label htmlFor="todobox1">Then i'll cook noodles</label><br/>
-
-  <input type="checkbox" id="todobox1" name="" value=""/>
-  <label htmlFor="todobox1">I'll finally take my bath</label>
+   </div>
     
-    <input type="checkbox" />
-            <p>Placeholder text here</p>
-            
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
-            
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
-            
-            <input type="checkbox" />
-            <p>Placeholder text here</p>
-    </div>
+   
      
   );
 }
